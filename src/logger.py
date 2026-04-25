@@ -1,7 +1,7 @@
 import logging
 import os
 from datetime import datetime
-import exception
+# import exception  # REMOVE THIS LINE - it's not being used
 
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 LOG_PATH=os.path.join(os.getcwd(),"logs")
@@ -13,6 +13,6 @@ logging.basicConfig(
     format='[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
 )
+
 if __name__=="__main__":
-    logging.info("Logging started") 
-    
+    logging.info("Logging started")
