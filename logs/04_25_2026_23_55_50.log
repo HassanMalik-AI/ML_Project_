@@ -1,0 +1,9 @@
+[2026-04-25 23:55:56,650] 25 root - INFO - Data Ingestion started
+[2026-04-25 23:55:56,665] 28 root - INFO - Read the dataset
+[2026-04-25 23:55:56,676] 31 root - INFO - Saved the raw data
+[2026-04-25 23:55:56,686] 33 root - INFO - Split the dataset
+[2026-04-25 23:55:56,696] 36 root - INFO - Saved the train and test data
+[2026-04-25 23:55:56,742] 82 root - INFO - Read train and test data completed
+[2026-04-25 23:55:56,743] 84 root - INFO - Obtaining preprocessing object
+[2026-04-25 23:55:56,743] 58 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-04-25 23:55:56,743] 59 root - INFO - Numerical columns: ['writing_score', 'reading_score']

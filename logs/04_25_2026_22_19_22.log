@@ -1,0 +1,5 @@
+[2026-04-25 22:19:28,073] 21 root - INFO - Data Ingestion started
+[2026-04-25 22:19:28,161] 24 root - INFO - Read the dataset
+[2026-04-25 22:19:28,175] 27 root - INFO - Saved the raw data
+[2026-04-25 22:19:28,208] 29 root - INFO - Split the dataset
+[2026-04-25 22:19:28,217] 32 root - INFO - Saved the train and test data
