@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Score Predictor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="glass-panel">
+            <header>
+                <h1>Exam Score Predictor</h1>
+                <p>Enter the student's details, reading score, and writing score to predict their Exam Score using the Machine Learning model.</p>
+            </header>
+
+            <form id="predict-form" method="POST" action="/predict">
+                <div class="form-grid">
+                    <!-- Gender -->
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <!-- Ethnicity -->
+                    <div class="input-group">
+                        <label for="ethnicity">Race/Ethnicity</label>
+                        <select name="ethnicity" id="ethnicity" required>
+                            <option value="" disabled selected>Select Ethnicity</option>
+                            <option value="group A">Group A</option>
+                            <option value="group B">Group B</option>
+                            <option value="group C">Group C</option>
+                            <option value="group D">Group D</option>
+                            <option value="group E">Group E</option>
+                        </select>
+                    </div>
+
+                    <!-- Parental Education -->
+                    <div class="input-group">
+                        <label for="parental_level_of_education">Parental Education</label>
+                        <select name="parental_level_of_education" id="parental_level_of_education" required>
+                            <option value="" disabled selected>Select Education Level</option>
+                            <option value="some high school">Some High School</option>
+                            <option value="high school">High School</option>
+                            <option value="some college">Some College</option>
+                            <option value="associate's degree">Associate's Degree</option>
+                            <option value="bachelor's degree">Bachelor's Degree</option>
+                            <option value="master's degree">Master's Degree</option>
+                        </select>
+                    </div>
+
+                    <!-- Lunch -->
+                    <div class="input-group">
+                        <label for="lunch">Lunch Type</label>
+                        <select name="lunch" id="lunch" required>
+                            <option value="" disabled selected>Select Lunch Type</option>
+                            <option value="standard">Standard</option>
+                            <option value="free/reduced">Free/Reduced</option>
+                        </select>
+                    </div>
+
+                    <!-- Test Preparation -->
+                    <div class="input-group">
+                        <label for="test_preparation_course">Test Preparation Course</label>
+                        <select name="test_preparation_course" id="test_preparation_course" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="none">None</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+
+                    <!-- Reading Score -->
+                    <div class="input-group">
+                        <label for="reading_score">Reading Score (0-100)</label>
+                        <input type="number" name="reading_score" id="reading_score" min="0" max="100" placeholder="e.g. 80" required>
+                    </div>
+
+                    <!-- Writing Score -->
+                    <div class="input-group">
+                        <label for="writing_score">Writing Score (0-100)</label>
+                        <input type="number" name="writing_score" id="writing_score" min="0" max="100" placeholder="e.g. 85" required>
+                    </div>
+                </div>
+
+                <div class="action-group">
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        <span class="btn-text">Predict Score</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <h2>Predicted Exam Score</h2>
+                <div class="score-display">
+                    <span id="predicted-score">0</span>
+                </div>
+                <p id="result-message">Based on the provided demographic and score features.</p>
+                <button id="reset-btn" class="reset-btn">Make Another Prediction</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
+</body>
+</html>
