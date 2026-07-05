@@ -1,0 +1,12 @@
+[2026-07-05 20:06:56,278] 25 root - INFO - Entered the data ingestion method or component
+[2026-07-05 20:06:56,292] 28 root - INFO - Read the dataset as dataframe
+[2026-07-05 20:06:56,299] 34 root - INFO - Train test split initiated
+[2026-07-05 20:06:56,315] 41 root - INFO - Inmgestion of the data iss completed
+[2026-07-05 20:06:56,371] 83 root - INFO - Read train and test data completed
+[2026-07-05 20:06:56,371] 85 root - INFO - Obtaining preprocessing object
+[2026-07-05 20:06:56,371] 59 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-07-05 20:06:56,372] 60 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-07-05 20:06:56,375] 98 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-07-05 20:06:56,457] 110 root - INFO - Saved preprocessing object.
+[2026-07-05 20:06:56,459] 35 root - INFO - Split training and testing data
+[2026-07-05 20:06:57,225] 62 root - INFO - Best model found is RandomForestRegressor with score 0.851241417897804

@@ -2,3 +2,9 @@ pandas
 scikit-learn
 dill
 numpy
+xgboost
+catboost
+seaborn
+#etc
+
+-e .
