@@ -1,4 +1,4 @@
-# Student Performance Prediction
+k# Student Performance Prediction
 
 ## Overview
 This project is an end-to-end Machine Learning web application built to predict a student's math score based on various demographic and educational features. It takes into account factors such as gender, race/ethnicity, parental level of education, lunch type, test preparation courses, reading scores, and writing scores. 
@@ -63,16 +63,3 @@ The project is organized in a modular and professional manner:
    ```bash
    pip install -r requirements.txt
    ```
-
-## Usage
-
-1. **Run the FastAPI server:**
-   ```bash
-   uvicorn app:app --reload
-   ```
-
-2. **Access the application:**
-   Open your web browser and navigate to: `http://localhost:8000`
-
-3. **Make a Prediction:**
-   Fill out the form on the home page with the required student information and submit it to see the predicted math score.
